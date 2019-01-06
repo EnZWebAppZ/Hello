@@ -1,0 +1,19 @@
+<div class="container some-margin" *ngIf="!this.showGame">
+	<div class="row justify-content-md-center">
+		<div class="col-md-4">
+			<p class="h2">
+				Select number of players
+			</p>
+
+			<div class="form-group">
+				<label for="player">Number of Players:</label>
+  	    <input type="number" id="player" class="form-control" [(ngModel)]="players" (keypress)="this.keypress($event)" required min="2" max="5" />
+	  </div>
+	   <button type="button" class="btn btn-info" mdbWavesEffect (click)="this.play()">Play!</button>
+	  </div>
+	</div>
+</div>
+
+<poker #poker *ngIf="this.showGame">
+
+</poker>
